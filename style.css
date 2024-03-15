@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#board {
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(62, 173, 62);
+}
+.tile {
+  background-color: aqua;
+  width: 300px;
+  height: 200px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid lightgray;
+  margin: 2px;
+  gap: 2px;
+  font-size: 30px;
+  text-align: center;
+}
+.button {
+  width: 70px;
+  height: 55px;
+  font-size: 20px;
+}
+/* span {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(117, 60, 60);
+} */
