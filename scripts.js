@@ -143,7 +143,7 @@ function getCurrentColumn() {
   return document.querySelectorAll(`.column-${columnNumber}`);
   // return columns[currentTurn];
 }
-// console.log(colors);
+
 function updateWithColors(colors) {
   let currentColumn = getCurrentColumn();
   currentColumn.forEach((element, index) => {
@@ -160,7 +160,9 @@ function showNextColumn() {
 }
 button.addEventListener("click", () => {
   if (currentTurn === maxTurns) {
-    alert("You Lose");
+    document.querySelector(".header").innerHTML = "Maybe Next Time";
+    document.querySelector("#answer").innerHTML =
+      "Word was " + wordOfDay.slice(0, 1).toUpperCase() + wordOfDay.slice(1);
     return;
   }
   let colors = getColors();
@@ -168,7 +170,7 @@ button.addEventListener("click", () => {
   updateWithColors(colors);
   currentTurn = Math.min(maxTurns, currentTurn + 1);
   if (isWinner) {
-    setTimeout(() => alert("YOU WON"), 500);
+    document.querySelector(".header").innerHTML = "YOU WIN";
   } else {
     showNextColumn();
   }

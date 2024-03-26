@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Wordle Game</h1>
+    <h1 class="header">Wordle Game</h1>
+
     <div id="board">
+      <p id="answer"></p>
       <div class="column-one" id="one"></div>
       <div class="column-one" id="two"></div>
       <div class="column-one" id="three"></div>
@@ -46,8 +48,10 @@
       <div class="column-six" id="twenty-six"></div>
     </div>
 
-    <p id="answer"></p>
-    <button class="button">Enter</button>
+    <!-- <p id="answer"></p> -->
+    <div class="button-container">
+      <button class="button">Enter</button>
+    </div>
     <script defer src="scripts.js"></script>
   </body>
 </html>
